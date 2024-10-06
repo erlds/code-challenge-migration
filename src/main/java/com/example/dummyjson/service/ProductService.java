@@ -15,18 +15,16 @@ import java.util.List;
 @Service
 public class ProductService {
 
-    private final String BASE_URL = "https://dummyjson.com/products";
+    private static final String BASE_URL = "https://dummyjson.com/products";
 
     private final WebClient webClient;
 
     @Autowired
     public ProductService(WebClient.Builder webClientBuilder) {
-        this.webClient = webClientBuilder
-                .baseUrl(BASE_URL)
+        this.webClient = webClientBuilder.baseUrl(BASE_URL)
                 .defaultHeader("Accept", "application/json")
-                .build();;
+                .build();
     }
-
 
     public List<Product> getAllProducts() {
         ProductList productList = webClient.get()
