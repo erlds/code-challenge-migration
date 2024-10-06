@@ -2,13 +2,12 @@ package com.example.dummyjson.dto;
 
 import org.junit.jupiter.api.Test;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ProductTest {
 
     @Test
-    public void testGetAndSetter(){
+    public void testProduct(){
         Long expectId = 1L;
         String expectedTitle = "A dummy title";
         String expectedDescription = "A dummy description";
