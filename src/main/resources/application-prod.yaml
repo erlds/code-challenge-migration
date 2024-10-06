@@ -1,0 +1,5 @@
+server:
+  port: 8080
+
+dummyjson:
+  baseUrl: https://dummyjson.com/products
