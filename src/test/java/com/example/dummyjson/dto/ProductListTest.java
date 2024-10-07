@@ -15,19 +15,14 @@ public class ProductListTest {
         String expectedDescription = "A dummy description";
         Double expectedPrice = Double.valueOf("2.1");
 
-        Product product1 = new Product();
-        product1.setId(1L);
-        product1.setTitle("A dummy title");
-        product1.setDescription("A dummy description");
-        product1.setPrice(Double.valueOf("2.1"));
+        Product product1 = new Product(1L, "A dummy title", "A dummy description", Double.valueOf("2.1"));
 
-        ProductList productList = new ProductList();
-        productList.setProducts(new ArrayList<>());
-        productList.getProducts().add(product1);
+        ProductList productList = new ProductList(new ArrayList<>());
+        productList.products().add(product1);
 
-        assertEquals(expectId, productList.getProducts().get(0).getId());
-        assertEquals(expectedTitle, productList.getProducts().get(0).getTitle());
-        assertEquals(expectedDescription, productList.getProducts().get(0).getDescription());
-        assertEquals(expectedPrice, productList.getProducts().get(0).getPrice());
+        assertEquals(expectId, productList.products().get(0).id());
+        assertEquals(expectedTitle, productList.products().get(0).title());
+        assertEquals(expectedDescription, productList.products().get(0).description());
+        assertEquals(expectedPrice, productList.products().get(0).price());
     }
 }

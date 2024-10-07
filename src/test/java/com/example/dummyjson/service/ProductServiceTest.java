@@ -30,12 +30,12 @@ public class ProductServiceTest {
         List<Product> result = productService.getAllProducts();
 
         Assertions.assertTrue(result.size() > 0);
-        Assertions.assertEquals(result.get(index).getId(),id);
+        Assertions.assertEquals(result.get(index).id(),id);
     }
 
     @Test
     public void testGetProductById() {
         Product result = productService.getProductById(id);
-        Assertions.assertEquals(id, result.getId());
+        Assertions.assertEquals(id, result.id());
     }
 }

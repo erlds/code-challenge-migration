@@ -34,7 +34,7 @@ public class ProductService {
                 .retrieve()
                 .bodyToMono(ProductList.class)
                 .doOnError(error -> System.out.println("Error occurred: " + error.getMessage())).block();
-        return productList != null ? productList.getProducts() : List.of();
+        return productList != null ? productList.products() : List.of();
     }
 
     public Product getProductById(Long id) {

@@ -13,15 +13,11 @@ public class ProductTest {
         String expectedDescription = "A dummy description";
         Double expectedPrice = Double.valueOf("2.1");
 
-        Product product1 = new Product();
-        product1.setId(1L);
-        product1.setTitle("A dummy title");
-        product1.setDescription("A dummy description");
-        product1.setPrice(Double.valueOf("2.1"));
+        Product product1 = new Product(1L, "A dummy title", "A dummy description", Double.valueOf("2.1"));
 
-        assertEquals(expectId, product1.getId());
-        assertEquals(expectedTitle, product1.getTitle());
-        assertEquals(expectedDescription, product1.getDescription());
-        assertEquals(expectedPrice, product1.getPrice());
+        assertEquals(expectId, product1.id());
+        assertEquals(expectedTitle, product1.title());
+        assertEquals(expectedDescription, product1.description());
+        assertEquals(expectedPrice, product1.price());
     }
 }
