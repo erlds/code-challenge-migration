@@ -148,11 +148,13 @@ dummyjson-client
     ```bash
     mvn clean package
     ```
-3. Rode o docker-compose
+   
+3. (Opcional) Troque a variável SPRING_PROFILES_ACTIVE dentro de docker-compose.yml para dev, se quiser usar o ambiente de desenvolvimento.
+4. Rode o docker-compose
     ```bash
     docker-compose up
     ```
-4. O projeto estará disponível em `http://localhost:8080`.
+5.O projeto estará disponível em `http://localhost:8080`.
 
 ### Executar Testes
 
